@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Celeng.in</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+  <ion-segment [(ngModel)]="Impian">
+    <ion-segment-button value="Impian">
+      Impian
+    </ion-segment-button>
+    <ion-segment-button value="Tabungan">
+      Tabungan
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <div [ngSwitch]="Impian">
+  <ion-list *ngSwitchCase="'Impian'">
+  <ion-card>
+    <img src="https://www.tsunagujapan.com/wp-content/uploads/2014/12/15032842049_53650c09ab_o.jpg"/>
+    <div class="card-title">Wisata ke Jepang</div>
+    <div class="card-subtitle">10 September 2018</div>
+    <div class="card-subsubtitle">Rp. 15.000.000,-</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://i.ytimg.com/vi/wKoHS2aKSUI/maxresdefault.jpg"/>
+    <div class="card-title">PC master Race</div>
+    <div class="card-subtitle">10 Oktober 2017</div>
+    <div class="card-subsubtitle">Rp. 20.000.000,-</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2010/06/lightcycle-lead01.jpg"/>
+    <div class="card-title">Motor Tron</div>
+    <div class="card-subtitle">20 Mei 2022</div>
+    <div class="card-subsubtitle">Rp. 170.000.000,-</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://dubaye.files.wordpress.com/2016/10/dubai.jpg"/>
+    <div class="card-title">Jalan ke Dubai</div>
+    <div class="card-subtitle">17 Agustus 2019</div>
+    <div class="card-subsubtitle">Rp. 30.000.000,-</div>
+  </ion-card>
+  <ion-fab right bottom>
+   <button ion-fab color="primary" (click)="doPrompt()"><ion-icon name="add"></ion-icon></button>
+ </ion-fab>
+</ion-list>
+</div>
+</ion-content>
